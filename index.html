@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Интерактивный тренажёр по свойствам степеней для 7–8 класса">
+  <title>Степень PRO · тренажёр</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="paper-grain" aria-hidden="true"></div>
+  <main class="app-shell">
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Степень PRO — на главную">
+        <span class="brand-mark">a<sup>n</sup></span>
+        <span>СТЕПЕНЬ<span class="brand-accent">PRO</span></span>
+      </a>
+      <nav class="top-nav" aria-label="Разделы тренажёра">
+        <a href="#rules">Шпаргалка</a>
+        <a href="#practice">Практика</a>
+        <a href="#how">Как работать</a>
+      </nav>
+      <span class="grade-chip">7–8 класс</span>
+    </header>
+
+    <section id="top" class="hero section-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span>Математика без зубрёжки</div>
+        <h1>Свойства степеней —<br><em>понимай, решай,</em> запоминай</h1>
+        <p class="lead">Сложные примеры, мгновенная проверка и подсказки в стиле школьной тетради. Тренируй правила так, чтобы они стали автоматическими.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#practice">Начать тренировку <span>→</span></a>
+          <a class="button ghost" href="#rules">Открыть формулы</a>
+        </div>
+        <div class="hero-notes">
+          <span>✦ 35+ заданий</span><span>✦ разный уровень</span><span>✦ отчёт учителю</span>
+        </div>
+      </div>
+      <div class="hero-board" aria-label="Пример формулы степени">
+        <div class="tape tape-one"></div><div class="tape tape-two"></div>
+        <p class="board-label">главное правило дня</p>
+        <div class="formula-big"><span>a</span><sup>m</sup> · <span>a</span><sup>n</sup> = <span>a</span><sup>m+n</sup></div>
+        <p>одинаковое основание<br>→ показатели <b>складываем</b></p>
+        <div class="board-doodle">✓</div>
+      </div>
+    </section>
+
+    <section id="rules" class="rules-section">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span>Шпаргалка</p><h2>10 правил, которые спасают в задачах</h2></div>
+        <p>Нажми на карточку — увидишь короткий пример и ловушку.</p>
+      </div>
+      <div id="ruleCards" class="rule-cards" aria-label="Свойства степеней"></div>
+    </section>
+
+    <section id="how" class="method-section">
+      <div class="method-title"><p class="eyebrow"><span></span>Маршрут</p><h2>Как заниматься<br>с пользой</h2></div>
+      <ol class="steps">
+        <li><span>01</span><div><h3>Вспомни формулу</h3><p>Перед стартом пролистай карточки. Не угадывай: назови правило вслух.</p></div></li>
+        <li><span>02</span><div><h3>Решай по шагам</h3><p>Вводи степень как <b>x^7</b>, дробь — <b>a^3/b</b>. После ответа есть разбор.</p></div></li>
+        <li><span>03</span><div><h3>Закрепи ошибку</h3><p>Ошибка — это точка роста. В конце вернись к отмеченным заданиям.</p></div></li>
+      </ol>
+    </section>
+
+    <section id="practice" class="practice-section">
+      <div class="section-heading practice-heading">
+        <div><p class="eyebrow"><span></span>Интерактивная практика</p><h2>Выбирай режим — и в бой</h2></div>
+        <p class="pencil-note">Все задания подобраны для 7–8 класса<br>и становятся сложнее по ходу работы.</p>
+      </div>
+
+      <div id="startScreen" class="mode-layout">
+        <article class="mode-card warmup">
+          <div class="mode-top"><span class="mode-icon">⚡</span><span class="level-tag">разминка</span></div>
+          <h3>Быстрый старт</h3>
+          <p>10 заданий: основные правила, нулевой и отрицательный показатель.</p>
+          <ul><li>≈ 8 минут</li><li>мгновенная проверка</li></ul>
+          <button class="button mode-button" data-mode="warmup">Начать <span>→</span></button>
+        </article>
+        <article class="mode-card marathon featured">
+          <div class="sticker">рекомендуем</div>
+          <div class="mode-top"><span class="mode-icon">✦</span><span class="level-tag hard">сложно</span></div>
+          <h3>Марафон степеней</h3>
+          <p>18 смешанных заданий: преобразования, дроби, несколько действий и ловушки.</p>
+          <ul><li>≈ 18 минут</li><li>итог учителю</li></ul>
+          <button class="button primary mode-button" data-mode="marathon">Пройти марафон <span>→</span></button>
+        </article>
+        <article class="mode-card mistakes">
+          <div class="mode-top"><span class="mode-icon">⌁</span><span class="level-tag">повторение</span></div>
+          <h3>Ловушки</h3>
+          <p>12 коварных вопросов. Отличи верное преобразование от ошибки.</p>
+          <ul><li>≈ 10 минут</li><li>на внимательность</li></ul>
+          <button class="button mode-button" data-mode="traps">Поймать ошибки <span>→</span></button>
+        </article>
+      </div>
+
+      <div id="trainer" class="trainer" hidden>
+        <div class="trainer-topbar">
+          <button id="quitBtn" class="text-button" type="button">← К режимам</button>
+          <div class="trainer-progress"><div><span id="progressLabel">Задание 1 из 10</span><span id="scoreLive">0 верно</span></div><div class="progress-track"><i id="progressBar"></i></div></div>
+          <div class="timer" aria-label="Время"><span>◷</span><b id="timer">00:00</b></div>
+        </div>
+        <div class="task-frame">
+          <div id="taskBadge" class="task-badge">правило</div>
+          <p id="taskTopic" class="task-topic">Свойства степеней</p>
+          <h3 id="taskQuestion">Загрузка задания…</h3>
+          <div id="taskExpression" class="expression" aria-live="polite"></div>
+          <div id="answerArea" class="answer-area"></div>
+          <div id="feedback" class="feedback" aria-live="polite"></div>
+          <div class="task-actions">
+            <button id="hintBtn" type="button" class="button ghost small">Нужна подсказка?</button>
+            <button id="checkBtn" type="button" class="button primary">Проверить <span>→</span></button>
+            <button id="nextBtn" type="button" class="button primary" hidden>Следующее <span>→</span></button>
+          </div>
+        </div>
+        <div class="keyboard-hint">Совет: в ответах используй знак <b>^</b> для степени: <b>x^5</b></div>
+      </div>
+
+      <div id="resultScreen" class="result-screen" hidden>
+        <div class="result-stamp">✓</div>
+        <p class="eyebrow center"><span></span>Тренировка завершена<span></span></p>
+        <h2 id="resultTitle">Отличная работа!</h2>
+        <p id="resultText" class="result-text"></p>
+        <div class="result-stats"><div><b id="resultScore">0/0</b><span>верных ответов</span></div><div><b id="resultPercent">0%</b><span>точность</span></div><div><b id="resultTime">00:00</b><span>время</span></div></div>
+        <div id="reviewList" class="review-list"></div>
+        <div class="send-card">
+          <div><p class="send-title">📩 Отправить учителю</p><p>Учитель получит имя, результат, время и ответы на задания.</p></div>
+          <div class="send-controls"><label for="studentName">Твоё имя</label><div><input id="studentName" maxlength="40" autocomplete="name" placeholder="Например, Маша Иванова"><button id="sendBtn" type="button" class="button primary">Отправить</button></div><p id="sendStatus" class="send-status"></p></div>
+        </div>
+        <div class="result-actions"><button id="retryBtn" type="button" class="button primary">Ещё одна попытка <span>↻</span></button><button id="downloadBtn" type="button" class="button ghost">Скачать свой отчёт</button></div>
+      </div>
+    </section>
+
+    <section class="memory-section">
+      <div class="memory-copy"><p class="eyebrow"><span></span>Запомни</p><h2>Не «магия степеней»,<br>а точная логика.</h2><p>Сначала посмотри на <b>основания</b>, затем на знак действия и только после этого работай с <b>показателями</b>.</p></div>
+      <div class="memory-note"><span class="pin"></span><p>Одинаковые основания?</p><strong>Только тогда можно<br>складывать или вычитать<br>показатели.</strong><small>2<sup>3</sup> + 2<sup>4</sup> ≠ 2<sup>7</sup></small></div>
+    </section>
+
+    <footer><span>СТЕПЕНЬ<span>PRO</span></span><p>Интерактивный тренажёр по математике · 7–8 класс</p><a href="#top">Наверх ↑</a></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
