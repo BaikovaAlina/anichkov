@@ -1,0 +1,17 @@
+{
+  "name": "anichkov-algebra",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Бесплатный тренажёр формул сокращённого умножения, 7–8 класс",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/engine.test.mjs tests/worker.test.mjs",
+    "preview": "python3 -m http.server 3000 --bind 0.0.0.0",
+    "worker:deploy": "npx wrangler@4 deploy --config worker/wrangler.jsonc",
+    "test:browser": "node tests/browser.smoke.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1"
+  }
+}
